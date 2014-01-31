@@ -1,0 +1,4 @@
+WiiRemote: {description: '', git: 'https://github.com/sugarsweetrobotics/WiiRemote.git',
+  hash: 7af48dd3319453e7edc5bb1535c57748c663b430}
+WiiRemoteTest: {description: '', git: 'https://github.com/sugarsweetrobotics/WiiRemoteTest.git',
+  hash: d42fbdd4f5c0247f0d79ebebedcb8851564bd594}

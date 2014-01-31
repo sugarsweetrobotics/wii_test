@@ -1,0 +1,149 @@
+<?xml version="1.0" ?>
+<rts:RtsProfile rts:abstract="RT System created by rtcryo." rts:creationDate="2014-02-01T00:09:10" rts:id="RTSystem :Sugar Sweet Robotics.DefaultSystem01.1.0" rts:updateDate="2014-02-01T00:09:10" rts:version="0.2" xmlns:rts="http://www.openrtp.org/namespaces/rts" xmlns:rtsExt="http://www.openrtp.org/namespaces/rts_ext" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <rts:Components rts:compositeType="None" rts:id="RTC:Sugar Sweet Robotics:Tutorial:WiiRemoteTest:1.0.0" rts:instanceName="WiiRemoteTest0" rts:isRequired="true" rts:pathUri="localhost/WiiRemoteTest0.rtc" rtsExt:visible="true">
+        <rts:DataPorts rts:name="buttons" rtsExt:visible="true"/>
+        <rts:DataPorts rts:name="accel" rtsExt:visible="true"/>
+        <rts:DataPorts rts:name="orientation" rtsExt:visible="true"/>
+        <rts:DataPorts rts:name="cursor" rtsExt:visible="true"/>
+        <rts:DataPorts rts:name="distance" rtsExt:visible="true"/>
+        <rts:DataPorts rts:name="ir" rtsExt:visible="true"/>
+        <rts:DataPorts rts:name="rumble" rtsExt:visible="true"/>
+        <rts:DataPorts rts:name="leds" rtsExt:visible="true"/>
+        <rts:ConfigurationSets rts:id="default"/>
+        <rts:ExecutionContexts rts:id="0" rts:kind="PERIODIC" rts:rate="1000.0"/>
+        <rtsExt:Location rtsExt:direction="DOWN" rtsExt:height="0" rtsExt:width="0" rtsExt:x="0" rtsExt:y="0"/>
+        <rtsExt:Properties rtsExt:name="IOR" rtsExt:value="IOR:010000003500000049444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e3000000000010000000000000080000000010102000c0000003139322e3136382e312e3800fb0a00000e000000fe71bceb520000848d000000000100000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000300000014000000010000000a0000003132372e302e302e310044c8"/>
+    </rts:Components>
+    <rts:Components rts:activeConfigurationSet="default" rts:compositeType="None" rts:id="RTC:Sugar Sweet Robotics:Input:WiiRemote:1.0.0" rts:instanceName="WiiRemote0" rts:isRequired="true" rts:pathUri="localhost/WiiRemote0.rtc" rtsExt:visible="true">
+        <rts:DataPorts rts:name="leds" rtsExt:visible="true"/>
+        <rts:DataPorts rts:name="rumble" rtsExt:visible="true"/>
+        <rts:DataPorts rts:name="buttons" rtsExt:visible="true"/>
+        <rts:DataPorts rts:name="accel" rtsExt:visible="true"/>
+        <rts:DataPorts rts:name="orientation" rtsExt:visible="true"/>
+        <rts:DataPorts rts:name="cursor" rtsExt:visible="true"/>
+        <rts:DataPorts rts:name="distance" rtsExt:visible="true"/>
+        <rts:DataPorts rts:name="ir" rtsExt:visible="true"/>
+        <rts:ConfigurationSets rts:id="default">
+            <rts:ConfigurationData rts:data="1" rts:name="is_bar_above"/>
+            <rts:ConfigurationData rts:data="4_3" rts:name="aspect_ratio"/>
+            <rts:ConfigurationData rts:data="480" rts:name="virtual_screen_height"/>
+            <rts:ConfigurationData rts:data="640" rts:name="virtual_screen_width"/>
+        </rts:ConfigurationSets>
+        <rts:ConfigurationSets rts:id="__widget__">
+            <rts:ConfigurationData rts:data="text" rts:name="is_bar_above"/>
+            <rts:ConfigurationData rts:data="ordered_list" rts:name="aspect_ratio"/>
+            <rts:ConfigurationData rts:data="ordered_list" rts:name="virtual_screen_height"/>
+            <rts:ConfigurationData rts:data="ordered_list" rts:name="virtual_screen_width"/>
+        </rts:ConfigurationSets>
+        <rts:ConfigurationSets rts:id="__constraints__">
+            <rts:ConfigurationData rts:data="4_3, 16_9" rts:name="aspect_ratio"/>
+        </rts:ConfigurationSets>
+        <rts:ExecutionContexts rts:id="0" rts:kind="PERIODIC" rts:rate="1000.0"/>
+        <rtsExt:Location rtsExt:direction="DOWN" rtsExt:height="0" rtsExt:width="0" rtsExt:x="0" rtsExt:y="0"/>
+        <rtsExt:Properties rtsExt:name="IOR" rtsExt:value="IOR:010000003500000049444c3a6f70656e72746d2e616973742e676f2e6a702f4f70656e52544d2f44617461466c6f77436f6d706f6e656e743a312e3000000000010000000000000080000000010102000c0000003139322e3136382e312e3800fa0a00000e000000fe71bceb520000848c000000000000000300000000000000080000000100000000545441010000001c000000010000000100010001000000010001050901010001000000090101000300000014000000010000000a0000003132372e302e302e310042c8"/>
+    </rts:Components>
+    <rts:DataPortConnectors rts:connectorId="0BD7F0BA-CECE-44FA-A70E-E1D3E66A4879" rts:dataType="IDL:RTC/TimedBoolean:1.0" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:name="rumblerumble" rts:pushInterval="0.0" rts:subscriptionType="new" rtsExt:visible="true">
+        <rts:sourceDataPort rts:componentId="RTC:Sugar Sweet Robotics:Tutorial:WiiRemoteTest:1.0.0" rts:instanceName="WiiRemoteTest0" rts:portName="WiiRemoteTest0.rumble">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/WiiRemoteTest0.rtc"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort rts:componentId="RTC:Sugar Sweet Robotics:Input:WiiRemote:1.0.0" rts:instanceName="WiiRemote0" rts:portName="WiiRemote0.rumble">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/WiiRemote0.rtc"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:name="dataport.dataflow_type" rtsExt:value="push"/>
+        <rtsExt:Properties rtsExt:name="dataport.serializer.cdr.endian" rtsExt:value="little,big"/>
+        <rtsExt:Properties rtsExt:name="dataport.data_type" rtsExt:value="IDL:RTC/TimedBoolean:1.0"/>
+        <rtsExt:Properties rtsExt:name="dataport.interface_type" rtsExt:value="corba_cdr"/>
+        <rtsExt:Properties rtsExt:name="dataport.subscription_type" rtsExt:value="new"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors rts:connectorId="19825E08-440E-459D-A29A-BB0D3747798E" rts:dataType="IDL:RTC/TimedBooleanSeq:1.0" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:name="ledsleds" rts:pushInterval="0.0" rts:subscriptionType="new" rtsExt:visible="true">
+        <rts:sourceDataPort rts:componentId="RTC:Sugar Sweet Robotics:Tutorial:WiiRemoteTest:1.0.0" rts:instanceName="WiiRemoteTest0" rts:portName="WiiRemoteTest0.leds">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/WiiRemoteTest0.rtc"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort rts:componentId="RTC:Sugar Sweet Robotics:Input:WiiRemote:1.0.0" rts:instanceName="WiiRemote0" rts:portName="WiiRemote0.leds">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/WiiRemote0.rtc"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:name="dataport.dataflow_type" rtsExt:value="push"/>
+        <rtsExt:Properties rtsExt:name="dataport.serializer.cdr.endian" rtsExt:value="little,big"/>
+        <rtsExt:Properties rtsExt:name="dataport.data_type" rtsExt:value="IDL:RTC/TimedBooleanSeq:1.0"/>
+        <rtsExt:Properties rtsExt:name="dataport.interface_type" rtsExt:value="corba_cdr"/>
+        <rtsExt:Properties rtsExt:name="dataport.subscription_type" rtsExt:value="new"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors rts:connectorId="99833672-8a89-11e3-9bca-14109fe66397" rts:dataType="IDL:RTC/TimedBooleanSeq:1.0" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:name="buttonsbuttons" rts:pushInterval="0.0" rts:subscriptionType="new" rtsExt:visible="true">
+        <rts:sourceDataPort rts:componentId="RTC:Sugar Sweet Robotics:Input:WiiRemote:1.0.0" rts:instanceName="WiiRemote0" rts:portName="WiiRemote0.buttons">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/WiiRemote0.rtc"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort rts:componentId="RTC:Sugar Sweet Robotics:Tutorial:WiiRemoteTest:1.0.0" rts:instanceName="WiiRemoteTest0" rts:portName="WiiRemoteTest0.buttons">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/WiiRemoteTest0.rtc"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:name="dataport.dataflow_type" rtsExt:value="push"/>
+        <rtsExt:Properties rtsExt:name="dataport.serializer.cdr.endian" rtsExt:value="little,big"/>
+        <rtsExt:Properties rtsExt:name="dataport.data_type" rtsExt:value="IDL:RTC/TimedBooleanSeq:1.0"/>
+        <rtsExt:Properties rtsExt:name="dataport.interface_type" rtsExt:value="corba_cdr"/>
+        <rtsExt:Properties rtsExt:name="dataport.subscription_type" rtsExt:value="new"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors rts:connectorId="9b2fa898-8a89-11e3-9bca-14109fe66397" rts:dataType="IDL:RTC/TimedAngularAcceleration3D:1.0" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:name="accelaccel" rts:pushInterval="0.0" rts:subscriptionType="new" rtsExt:visible="true">
+        <rts:sourceDataPort rts:componentId="RTC:Sugar Sweet Robotics:Input:WiiRemote:1.0.0" rts:instanceName="WiiRemote0" rts:portName="WiiRemote0.accel">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/WiiRemote0.rtc"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort rts:componentId="RTC:Sugar Sweet Robotics:Tutorial:WiiRemoteTest:1.0.0" rts:instanceName="WiiRemoteTest0" rts:portName="WiiRemoteTest0.accel">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/WiiRemoteTest0.rtc"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:name="dataport.dataflow_type" rtsExt:value="push"/>
+        <rtsExt:Properties rtsExt:name="dataport.serializer.cdr.endian" rtsExt:value="little,big"/>
+        <rtsExt:Properties rtsExt:name="dataport.data_type" rtsExt:value="IDL:RTC/TimedAngularAcceleration3D:1.0"/>
+        <rtsExt:Properties rtsExt:name="dataport.interface_type" rtsExt:value="corba_cdr"/>
+        <rtsExt:Properties rtsExt:name="dataport.subscription_type" rtsExt:value="new"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors rts:connectorId="9c3624ba-8a89-11e3-9bca-14109fe66397" rts:dataType="IDL:RTC/TimedOrientation3D:1.0" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:name="orientationorientation" rts:pushInterval="0.0" rts:subscriptionType="new" rtsExt:visible="true">
+        <rts:sourceDataPort rts:componentId="RTC:Sugar Sweet Robotics:Input:WiiRemote:1.0.0" rts:instanceName="WiiRemote0" rts:portName="WiiRemote0.orientation">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/WiiRemote0.rtc"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort rts:componentId="RTC:Sugar Sweet Robotics:Tutorial:WiiRemoteTest:1.0.0" rts:instanceName="WiiRemoteTest0" rts:portName="WiiRemoteTest0.orientation">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/WiiRemoteTest0.rtc"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:name="dataport.dataflow_type" rtsExt:value="push"/>
+        <rtsExt:Properties rtsExt:name="dataport.serializer.cdr.endian" rtsExt:value="little,big"/>
+        <rtsExt:Properties rtsExt:name="dataport.data_type" rtsExt:value="IDL:RTC/TimedOrientation3D:1.0"/>
+        <rtsExt:Properties rtsExt:name="dataport.interface_type" rtsExt:value="corba_cdr"/>
+        <rtsExt:Properties rtsExt:name="dataport.subscription_type" rtsExt:value="new"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors rts:connectorId="9cebf83a-8a89-11e3-9bca-14109fe66397" rts:dataType="IDL:RTC/TimedPoint2D:1.0" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:name="cursorcursor" rts:pushInterval="0.0" rts:subscriptionType="new" rtsExt:visible="true">
+        <rts:sourceDataPort rts:componentId="RTC:Sugar Sweet Robotics:Input:WiiRemote:1.0.0" rts:instanceName="WiiRemote0" rts:portName="WiiRemote0.cursor">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/WiiRemote0.rtc"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort rts:componentId="RTC:Sugar Sweet Robotics:Tutorial:WiiRemoteTest:1.0.0" rts:instanceName="WiiRemoteTest0" rts:portName="WiiRemoteTest0.cursor">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/WiiRemoteTest0.rtc"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:name="dataport.dataflow_type" rtsExt:value="push"/>
+        <rtsExt:Properties rtsExt:name="dataport.serializer.cdr.endian" rtsExt:value="little,big"/>
+        <rtsExt:Properties rtsExt:name="dataport.data_type" rtsExt:value="IDL:RTC/TimedPoint2D:1.0"/>
+        <rtsExt:Properties rtsExt:name="dataport.interface_type" rtsExt:value="corba_cdr"/>
+        <rtsExt:Properties rtsExt:name="dataport.subscription_type" rtsExt:value="new"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors rts:connectorId="9fdaacbc-8a89-11e3-9bca-14109fe66397" rts:dataType="IDL:RTC/TimedLong:1.0" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:name="distancedistance" rts:pushInterval="0.0" rts:subscriptionType="new" rtsExt:visible="true">
+        <rts:sourceDataPort rts:componentId="RTC:Sugar Sweet Robotics:Input:WiiRemote:1.0.0" rts:instanceName="WiiRemote0" rts:portName="WiiRemote0.distance">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/WiiRemote0.rtc"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort rts:componentId="RTC:Sugar Sweet Robotics:Tutorial:WiiRemoteTest:1.0.0" rts:instanceName="WiiRemoteTest0" rts:portName="WiiRemoteTest0.distance">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/WiiRemoteTest0.rtc"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:name="dataport.dataflow_type" rtsExt:value="push"/>
+        <rtsExt:Properties rtsExt:name="dataport.serializer.cdr.endian" rtsExt:value="little,big"/>
+        <rtsExt:Properties rtsExt:name="dataport.data_type" rtsExt:value="IDL:RTC/TimedLong:1.0"/>
+        <rtsExt:Properties rtsExt:name="dataport.interface_type" rtsExt:value="corba_cdr"/>
+        <rtsExt:Properties rtsExt:name="dataport.subscription_type" rtsExt:value="new"/>
+    </rts:DataPortConnectors>
+    <rts:DataPortConnectors rts:connectorId="a1bcd168-8a89-11e3-9bca-14109fe66397" rts:dataType="IDL:RTC/TimedPoint2D:1.0" rts:dataflowType="push" rts:interfaceType="corba_cdr" rts:name="irir" rts:pushInterval="0.0" rts:subscriptionType="new" rtsExt:visible="true">
+        <rts:sourceDataPort rts:componentId="RTC:Sugar Sweet Robotics:Input:WiiRemote:1.0.0" rts:instanceName="WiiRemote0" rts:portName="WiiRemote0.ir">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/WiiRemote0.rtc"/>
+        </rts:sourceDataPort>
+        <rts:targetDataPort rts:componentId="RTC:Sugar Sweet Robotics:Tutorial:WiiRemoteTest:1.0.0" rts:instanceName="WiiRemoteTest0" rts:portName="WiiRemoteTest0.ir">
+            <rtsExt:Properties rtsExt:name="COMPONENT_PATH_ID" rtsExt:value="localhost/WiiRemoteTest0.rtc"/>
+        </rts:targetDataPort>
+        <rtsExt:Properties rtsExt:name="dataport.dataflow_type" rtsExt:value="push"/>
+        <rtsExt:Properties rtsExt:name="dataport.serializer.cdr.endian" rtsExt:value="little,big"/>
+        <rtsExt:Properties rtsExt:name="dataport.data_type" rtsExt:value="IDL:RTC/TimedPoint2D:1.0"/>
+        <rtsExt:Properties rtsExt:name="dataport.interface_type" rtsExt:value="corba_cdr"/>
+        <rtsExt:Properties rtsExt:name="dataport.subscription_type" rtsExt:value="new"/>
+    </rts:DataPortConnectors>
+</rts:RtsProfile>
